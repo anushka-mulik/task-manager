@@ -1,173 +1,158 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:764ba2&height=220&section=header&text=Task%20Manager%20API&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=35"/>
+# 🚀 TASK MANAGER API
 
-# 🚀 Task Manager API
+### Enterprise-style REST API for Modern Productivity Management
 
-### A Professional RESTful Backend System Built With Node.js, Express & MongoDB
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=180&section=header&text=TASK%20MANAGER%20API&fontSize=55&fontColor=ffffff&animation=twinkling"/>
 
 <br/>
 
-<img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js"/>
-<img src="https://img.shields.io/badge/API-Express.js-black?style=for-the-badge&logo=express"/>
-<img src="https://img.shields.io/badge/Database-MongoDB-success?style=for-the-badge&logo=mongodb"/>
-<img src="https://img.shields.io/badge/Architecture-REST_API-blue?style=for-the-badge"/>
-
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,javascript,git,github"/>
+<img src="https://img.shields.io/badge/Node.js-v20+-339933?style=flat-square&logo=node.js"/>
+<img src="https://img.shields.io/badge/Express.js-REST%20API-000000?style=flat-square&logo=express"/>
+<img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=flat-square&logo=mongodb"/>
+<img src="https://img.shields.io/badge/Mongoose-ODM-red?style=flat-square"/>
 
 </div>
 
 
-# 🧊 Project Vision
+---
 
-**Task Manager API** is a scalable backend application designed to efficiently manage daily tasks through a clean REST architecture.
+# 📌 About The Project
 
-The project focuses on real-world backend engineering concepts:
+**Task Manager API** is a backend-focused productivity management system designed with a scalable REST architecture.
 
-✨ CRUD operations  
-✨ Database modeling  
-✨ API architecture  
-✨ Filtering & pagination  
-✨ Server configuration  
-✨ Error handling  
+The application provides a structured way to create, manage, update, and organize tasks while maintaining efficient database communication using MongoDB and Mongoose.
+
+Built with clean backend principles, this project demonstrates practical experience in:
+
+- API development
+- Database design
+- Server architecture
+- Data validation
+- Query optimization
+- Backend workflow management
 
 
 ---
 
-# 🎯 Core Features
+# ✨ Feature Highlights
 
 
 <table>
 <tr>
 
-<td width="50%">
+<td>
 
-## 📌 Task Management
+### 📝 Task Operations
 
 ✔ Create Tasks  
+✔ Read Tasks  
 ✔ Update Tasks  
 ✔ Delete Tasks  
-✔ View Tasks  
-✔ Track Completion Status  
 
 </td>
 
-<td width="50%">
 
-## ⚡ Advanced Features
+<td>
 
-✔ Priority Management  
-✔ Due Date Tracking  
+### ⚡ Smart Management
+
+✔ Priority Levels  
+✔ Due Dates  
+✔ Completion Tracking  
 ✔ Pagination  
-✔ Filtering  
-✔ MongoDB Persistence  
 
 </td>
 
 </tr>
+
+
+<tr>
+
+<td>
+
+### 🔎 Query System
+
+✔ Filter by Priority  
+✔ Filter by Date  
+✔ Limit Results  
+✔ Page Navigation  
+
+</td>
+
+
+<td>
+
+### 🏗 Backend Quality
+
+✔ MVC Structure  
+✔ Environment Config  
+✔ MongoDB Integration  
+✔ Async Operations  
+
+</td>
+
+</tr>
+
 </table>
 
 
 ---
 
-# 🏗️ System Architecture
+# 🧊 Architecture Overview
 
 
 ```
-                    CLIENT
+                    USER / CLIENT
 
-                      |
-                      |
-                 HTTP REQUEST
+                         |
+                         |
+                         ▼
 
-                      |
-                      ▼
+                  REST API REQUEST
 
-              Express.js Server
+                         |
+                         |
+                         ▼
 
-                      |
-                      |
-          -------------------------
-          |                       |
-          ▼                       ▼
+              ┌──────────────────┐
+              │   Express.js     │
+              │   API Server     │
+              └──────────────────┘
 
-      API Routes             Middleware
+                         |
+                         |
+                         ▼
 
+              ┌──────────────────┐
+              │    Mongoose      │
+              │   Data Layer     │
+              └──────────────────┘
 
-                      |
-                      ▼
+                         |
+                         |
+                         ▼
 
-              Mongoose ODM
-
-                      |
-                      ▼
-
-                 MongoDB
-
-```
-
-
----
-
-# 🧬 Database Design
-
-
-## Task Collection
-
-
-```javascript
-{
-   taskName: String,
-
-   priority:
-   "Low" | "Medium" | "High",
-
-   dueDate: Date,
-
-   completed: Boolean,
-
-   createdAt: Date,
-
-   updatedAt: Date
-}
+              ┌──────────────────┐
+              │    MongoDB       │
+              │   Database       │
+              └──────────────────┘
 
 ```
 
 
 ---
 
-# 🛠️ Technology Stack
-
-
-<div align="center">
-
-
-| Technology | Purpose |
-|---|---|
-| Node.js | Runtime Environment |
-| Express.js | Backend Framework |
-| MongoDB | Database |
-| Mongoose | Database Modeling |
-| dotenv | Environment Management |
-| Nodemon | Development Server |
-
-
-</div>
-
-
----
-
-# 📂 Project Structure
+# 🗂 Project Structure
 
 
 ```
-task-manager
+task-manager/
+
 │
-├── models
-│   |
-│   └── Task.js
+├── models/
+│    └── Task.js
 │
 ├── server.js
 │
@@ -182,23 +167,58 @@ task-manager
 
 ---
 
-# 🔥 API Documentation
+# 🧬 Data Model
 
 
-## Create Task
+## Task Schema
 
-### POST
+
+```javascript
+
+Task {
+
+ id: ObjectId,
+
+ taskName: String,
+
+ priority:
+ [
+  "Low",
+  "Medium",
+  "High"
+ ],
+
+ dueDate: Date,
+
+ completed: Boolean,
+
+ createdAt: Date,
+
+ updatedAt: Date
+
+}
 
 ```
-/tasks
+
+
+---
+
+# 🔌 API Reference
+
+
+## ➕ Create Task
+
+
+```
+POST /tasks
 ```
 
 
-Request:
+Example:
 
 ```json
 {
- "taskName":"Build API",
+ "taskName":"Complete Backend Project",
  "priority":"High",
  "dueDate":"2026-06-22"
 }
@@ -208,58 +228,52 @@ Request:
 
 ---
 
-## Get All Tasks
+## 📋 Get Tasks
 
-
-### GET
 
 ```
-/tasks
+GET /tasks
 ```
 
 
-Pagination:
+### Pagination
 
 ```
-/tasks?page=1&limit=5
+GET /tasks?page=1&limit=5
 ```
 
 
-Filter:
+### Priority Filter
 
 ```
-/tasks?priority=High
+GET /tasks?priority=High
 ```
 
 
 ---
 
-## Update Task
+## ✏ Update Task
 
-
-### PUT
 
 ```
-/tasks/:id
+PUT /tasks/:id
 ```
 
 
 Example:
 
 ```
-/tasks/65abc123
+PUT /tasks/65abc123
 ```
 
 
 ---
 
-## Delete Task
+## 🗑 Delete Task
 
-
-### DELETE
 
 ```
-/tasks/:id
+DELETE /tasks/:id
 ```
 
 
@@ -267,7 +281,8 @@ Response:
 
 ```json
 {
- "message":"Task Deleted Successfully"
+ "message":
+ "Task Deleted Successfully"
 }
 
 ```
@@ -275,36 +290,28 @@ Response:
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Local Development Setup
 
 
-## Clone Repository
+### 1. Clone Repository
 
 
 ```bash
 git clone https://github.com/anushka-mulik/task-manager.git
+
 ```
 
 
-## Enter Project
-
-
-```bash
-cd task-manager
-```
-
-
-## Install Packages
+### 2. Install Dependencies
 
 
 ```bash
 npm install
+
 ```
 
 
----
-
-# 🔐 Environment Setup
+### 3. Configure Environment
 
 
 Create:
@@ -326,9 +333,7 @@ MONGO_URI=mongodb://127.0.0.1:27017/taskdb
 ```
 
 
----
-
-# ▶️ Run Application
+### 4. Start Server
 
 
 Development:
@@ -336,6 +341,7 @@ Development:
 
 ```bash
 npm run dev
+
 ```
 
 
@@ -344,118 +350,112 @@ Production:
 
 ```bash
 npm start
-```
-
-
-Expected:
-
-
-```
-MongoDB Connected
-
-Server running on port 5000
 
 ```
 
 
 ---
 
-# 🧠 Engineering Highlights
+# 📊 Technical Implementation
 
 
-<div align="center">
-
-
-| Skill | Implementation |
-|-|-|
-| REST API | Express Routing |
-| Database | MongoDB + Mongoose |
-| Data Validation | Schema Rules |
-| Async Programming | Async/Await |
-| Query Handling | Filters & Pagination |
-| Configuration | Environment Variables |
-
-
-</div>
+| Area | Implementation |
+|---|---|
+| Backend Framework | Express.js |
+| Runtime | Node.js |
+| Database | MongoDB |
+| ODM | Mongoose |
+| API Style | REST |
+| Configuration | dotenv |
+| Development | Nodemon |
 
 
 ---
 
-# 🚀 Future Roadmap
+# 🧠 Developer Skills Demonstrated
 
 
 ```
-✅ CRUD API
+Backend Development
+        |
+        |
+        ├── REST API Design
+        |
+        ├── Database Modeling
+        |
+        ├── CRUD Architecture
+        |
+        ├── Async Programming
+        |
+        ├── Query Handling
+        |
+        └── Server Configuration
 
+```
+
+
+---
+
+# 🚀 Future Improvements
+
+
+### Version 2.0
+
+```
 ⬜ JWT Authentication
 
-⬜ User Accounts
+⬜ User Profiles
 
 ⬜ Role Based Access
 
-⬜ React Dashboard
+⬜ React Admin Dashboard
 
-⬜ Docker Deployment
+⬜ Docker Containerization
 
-⬜ Cloud Hosting
+⬜ Cloud Deployment
 
 ⬜ Automated Testing
 
-```
-
-
----
-
-# 📸 Project Showcase
-
-
-Add screenshots here:
-
-
-```
-/screenshots
-
- ├── api-response.png
-
- ├── database.png
-
- └── postman-testing.png
+⬜ Swagger Documentation
 
 ```
 
 
 ---
 
-# 👨‍💻 Developer
+# 🏆 Why This Project?
 
 
-<div align="center">
+This project represents practical backend engineering experience by implementing a complete REST API workflow.
+
+It demonstrates the ability to:
+
+- Design backend services
+- Connect applications with databases
+- Build maintainable APIs
+- Handle real-world data operations
+
+
+---
+
+# 👨‍💻 Author
 
 
 ## Anushka Mulik
 
 
-<a href="https://github.com/anushka-mulik">
+GitHub:
 
-<img src="https://img.shields.io/badge/GitHub-Anushka%20Mulik-black?style=for-the-badge&logo=github"/>
-
-</a>
-
-
-</div>
+https://github.com/anushka-mulik
 
 
 ---
 
 <div align="center">
 
+### ⭐ If you found this project useful, consider starring the repository.
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:764ba2,100:667eea&height=120&section=footer"/>
 
-
-### ⭐ Built with Node.js + Express + MongoDB
-
-### 🚀 Designed for scalable backend development
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer"/>
 
 </div>
