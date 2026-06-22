@@ -1,67 +1,93 @@
 <div align="center">
 
-# 🚀 TASK MANAGER API
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00c6ff,50:0072ff,100:7b2ff7&height=250&section=header&text=TASK%20MANAGER%20API&fontSize=70&fontColor=ffffff&animation=fadeIn"/>
 
-### Enterprise-style REST API for Modern Productivity Management
+# 🚀 Task Manager API
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=180&section=header&text=TASK%20MANAGER%20API&fontSize=55&fontColor=ffffff&animation=twinkling"/>
+### Production-Ready REST Backend System Built For Scalable Productivity Management
 
 <br/>
 
-<img src="https://img.shields.io/badge/Node.js-v20+-339933?style=flat-square&logo=node.js"/>
-<img src="https://img.shields.io/badge/Express.js-REST%20API-000000?style=flat-square&logo=express"/>
-<img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=flat-square&logo=mongodb"/>
-<img src="https://img.shields.io/badge/Mongoose-ODM-red?style=flat-square"/>
+<img src="https://img.shields.io/badge/Backend-Node.js%20%7C%20Express-success?style=for-the-badge&logo=node.js"/>
+
+<img src="https://img.shields.io/badge/Database-MongoDB-green?style=for-the-badge&logo=mongodb"/>
+
+<img src="https://img.shields.io/badge/API-REST-blue?style=for-the-badge"/>
+
+<img src="https://img.shields.io/badge/Container-Docker-2496ED?style=for-the-badge&logo=docker"/>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,docker,git,github,javascript"/>
 
 </div>
 
 
 ---
 
-# 📌 About The Project
+# 🧊 Overview
 
-**Task Manager API** is a backend-focused productivity management system designed with a scalable REST architecture.
+## What is Task Manager API?
 
-The application provides a structured way to create, manage, update, and organize tasks while maintaining efficient database communication using MongoDB and Mongoose.
+Task Manager API is a scalable backend service designed to manage tasks through a clean REST architecture.
 
-Built with clean backend principles, this project demonstrates practical experience in:
+The system provides:
 
-- API development
-- Database design
-- Server architecture
-- Data validation
-- Query optimization
-- Backend workflow management
+- Task lifecycle management
+- Priority handling
+- Deadline tracking
+- Filtering
+- Pagination
+- MongoDB persistence
+
+
+The goal of this project is to demonstrate real-world backend engineering practices used in production systems.
 
 
 ---
 
-# ✨ Feature Highlights
+# ⚡ Key Features
 
 
 <table>
+
 <tr>
 
-<td>
+<td width="50%">
 
-### 📝 Task Operations
 
-✔ Create Tasks  
-✔ Read Tasks  
-✔ Update Tasks  
-✔ Delete Tasks  
+## 📝 Task Management
+
+✔ Create Tasks
+
+✔ Read Tasks
+
+✔ Update Tasks
+
+✔ Delete Tasks
+
+✔ Completion Tracking
+
 
 </td>
 
 
-<td>
+<td width="50%">
 
-### ⚡ Smart Management
 
-✔ Priority Levels  
-✔ Due Dates  
-✔ Completion Tracking  
-✔ Pagination  
+## 🚀 Backend Capabilities
+
+
+✔ REST API Architecture
+
+✔ MongoDB Integration
+
+✔ Async Operations
+
+✔ Environment Configuration
+
+✔ Error Handling
+
 
 </td>
 
@@ -70,131 +96,173 @@ Built with clean backend principles, this project demonstrates practical experie
 
 <tr>
 
+
 <td>
 
-### 🔎 Query System
 
-✔ Filter by Priority  
-✔ Filter by Date  
-✔ Limit Results  
-✔ Page Navigation  
+## 🔍 Query Engine
+
+
+✔ Pagination
+
+✔ Priority Filtering
+
+✔ Date Filtering
+
+✔ Optimized Database Queries
+
 
 </td>
 
 
 <td>
 
-### 🏗 Backend Quality
 
-✔ MVC Structure  
-✔ Environment Config  
-✔ MongoDB Integration  
-✔ Async Operations  
+## 🏗 Engineering
+
+
+✔ MVC Structure
+
+✔ Docker Ready
+
+✔ Swagger Ready
+
+✔ CI/CD Ready
+
 
 </td>
+
 
 </tr>
+
 
 </table>
 
 
 ---
 
-# 🧊 Architecture Overview
+# 🏛️ System Architecture
 
 
 ```
-                    USER / CLIENT
+                         CLIENT
 
-                         |
-                         |
-                         ▼
+                           |
+                           |
+                           ▼
 
-                  REST API REQUEST
+                    HTTP REQUESTS
 
-                         |
-                         |
-                         ▼
 
-              ┌──────────────────┐
-              │   Express.js     │
-              │   API Server     │
-              └──────────────────┘
+                           |
+                           |
+                           ▼
 
-                         |
-                         |
-                         ▼
 
-              ┌──────────────────┐
-              │    Mongoose      │
-              │   Data Layer     │
-              └──────────────────┘
+              ┌────────────────────┐
+              │                    │
+              │    EXPRESS API     │
+              │                    │
+              └────────────────────┘
 
-                         |
-                         |
-                         ▼
 
-              ┌──────────────────┐
-              │    MongoDB       │
-              │   Database       │
-              └──────────────────┘
+                           |
+                           |
+                           ▼
+
+
+              ┌────────────────────┐
+              │                    │
+              │     MONGOOSE       │
+              │       ODM          │
+              │                    │
+              └────────────────────┘
+
+
+                           |
+                           |
+                           ▼
+
+
+              ┌────────────────────┐
+              │                    │
+              │      MONGODB       │
+              │     DATABASE       │
+              │                    │
+              └────────────────────┘
+
 
 ```
 
 
 ---
 
-# 🗂 Project Structure
+# 📂 Project Structure
 
 
 ```
-task-manager/
+task-manager
 
 │
-├── models/
+
+├── models
+
 │    └── Task.js
-│
+
+
 ├── server.js
-│
+
+
 ├── package.json
-│
-├── package-lock.json
-│
-└── .env
+
+
+├── Dockerfile
+
+
+├── docker-compose.yml
+
+
+├── swagger
+
+
+│    └── swagger.js
+
+
+├── .env
+
+
+└── README.md
 
 ```
 
 
 ---
 
-# 🧬 Data Model
+# 🧬 Database Schema
 
 
-## Task Schema
+## Task Model
 
 
 ```javascript
 
-Task {
-
- id: ObjectId,
-
- taskName: String,
+{
+ taskName:String,
 
  priority:
  [
-  "Low",
-  "Medium",
-  "High"
+ "Low",
+ "Medium",
+ "High"
  ],
 
- dueDate: Date,
+ dueDate:Date,
 
- completed: Boolean,
+ completed:Boolean,
 
- createdAt: Date,
+ createdAt:Date,
 
- updatedAt: Date
+ updatedAt:Date
 
 }
 
@@ -203,10 +271,10 @@ Task {
 
 ---
 
-# 🔌 API Reference
+# 🔌 REST API Documentation
 
 
-## ➕ Create Task
+## Create Task
 
 
 ```
@@ -216,11 +284,16 @@ POST /tasks
 
 Example:
 
+
 ```json
+
 {
- "taskName":"Complete Backend Project",
+ "taskName":"Build Production API",
+
  "priority":"High",
+
  "dueDate":"2026-06-22"
+
 }
 
 ```
@@ -228,90 +301,113 @@ Example:
 
 ---
 
-## 📋 Get Tasks
+
+## Get Tasks
 
 
 ```
 GET /tasks
+
 ```
 
 
-### Pagination
+Pagination:
 
 ```
 GET /tasks?page=1&limit=5
+
 ```
 
 
-### Priority Filter
+Filter:
 
 ```
 GET /tasks?priority=High
+
 ```
 
 
 ---
 
-## ✏ Update Task
+
+## Update Task
 
 
 ```
 PUT /tasks/:id
-```
 
-
-Example:
-
-```
-PUT /tasks/65abc123
 ```
 
 
 ---
 
-## 🗑 Delete Task
+
+## Delete Task
 
 
 ```
 DELETE /tasks/:id
-```
-
-
-Response:
-
-```json
-{
- "message":
- "Task Deleted Successfully"
-}
 
 ```
 
 
 ---
 
-# ⚙️ Local Development Setup
+
+# 📚 Swagger API Documentation
 
 
-### 1. Clone Repository
+Interactive API documentation:
+
+
+```
+http://localhost:5000/api-docs
+
+```
+
+
+Swagger provides:
+
+
+```
+✔ API Testing
+
+✔ Endpoint Documentation
+
+✔ Request Examples
+
+✔ Response Preview
+
+```
+
+
+---
+
+
+# ⚙️ Local Setup
+
+
+## Clone Repository
 
 
 ```bash
+
 git clone https://github.com/anushka-mulik/task-manager.git
 
 ```
 
 
-### 2. Install Dependencies
+## Install Dependencies
 
 
 ```bash
+
 npm install
 
 ```
 
 
-### 3. Configure Environment
+## Environment Variables
 
 
 Create:
@@ -319,6 +415,7 @@ Create:
 
 ```
 .env
+
 ```
 
 
@@ -326,6 +423,7 @@ Add:
 
 
 ```env
+
 PORT=5000
 
 MONGO_URI=mongodb://127.0.0.1:27017/taskdb
@@ -333,13 +431,17 @@ MONGO_URI=mongodb://127.0.0.1:27017/taskdb
 ```
 
 
-### 4. Start Server
+---
+
+
+# ▶️ Run Application
 
 
 Development:
 
 
 ```bash
+
 npm run dev
 
 ```
@@ -349,74 +451,226 @@ Production:
 
 
 ```bash
+
 npm start
 
 ```
 
 
+
+Expected Output:
+
+
+```
+
+MongoDB Connected
+
+Server running on port 5000
+
+```
+
+
 ---
 
-# 📊 Technical Implementation
+# 🐳 Docker Deployment
 
 
-| Area | Implementation |
-|---|---|
-| Backend Framework | Express.js |
-| Runtime | Node.js |
+Build container:
+
+
+```bash
+
+docker build -t task-manager-api .
+
+```
+
+
+Run:
+
+
+```bash
+
+docker run -p 5000:5000 task-manager-api
+
+```
+
+
+Using Docker Compose:
+
+
+```bash
+
+docker compose up
+
+```
+
+
+Architecture:
+
+
+```
+
+Docker Container
+
+       |
+
+       |
+
+ Express API
+
+       |
+
+       |
+
+ MongoDB Container
+
+```
+
+
+---
+
+# 🚀 Deployment
+
+
+Ready for deployment on:
+
+
+- Render
+- Railway
+- AWS
+- DigitalOcean
+
+
+Production flow:
+
+
+```
+
+GitHub
+
+  |
+
+  |
+
+CI Pipeline
+
+  |
+
+  |
+
+Docker Build
+
+  |
+
+  |
+
+Cloud Deployment
+
+  |
+
+  |
+
+Live API
+
+
+```
+
+
+---
+
+# 🔄 CI/CD Pipeline
+
+
+GitHub Actions Workflow:
+
+
+```
+
+Code Push
+
+    |
+
+    ▼
+
+Install Dependencies
+
+    |
+
+    ▼
+
+Run Tests
+
+    |
+
+    ▼
+
+Build Application
+
+    |
+
+    ▼
+
+Deploy
+
+
+```
+
+
+---
+
+# 🧠 Engineering Skills Demonstrated
+
+
+| Category | Implementation |
+|-|-|
+| Backend | Node.js + Express |
 | Database | MongoDB |
 | ODM | Mongoose |
-| API Style | REST |
-| Configuration | dotenv |
-| Development | Nodemon |
+| API Design | REST |
+| Architecture | Modular Backend |
+| Deployment | Docker |
+| Documentation | Swagger |
+| Automation | CI/CD |
 
 
 ---
 
-# 🧠 Developer Skills Demonstrated
+# 📈 Future Scaling Roadmap
 
 
 ```
-Backend Development
-        |
-        |
-        ├── REST API Design
-        |
-        ├── Database Modeling
-        |
-        ├── CRUD Architecture
-        |
-        ├── Async Programming
-        |
-        ├── Query Handling
-        |
-        └── Server Configuration
 
-```
+V1
+
+✔ CRUD API
 
 
----
+V2
 
-# 🚀 Future Improvements
-
-
-### Version 2.0
-
-```
 ⬜ JWT Authentication
 
-⬜ User Profiles
+⬜ User Management
 
 ⬜ Role Based Access
 
-⬜ React Admin Dashboard
 
-⬜ Docker Containerization
+V3
 
-⬜ Cloud Deployment
+⬜ React Dashboard
 
-⬜ Automated Testing
+⬜ Redis Cache
 
-⬜ Swagger Documentation
+⬜ Background Jobs
+
+
+V4
+
+⬜ Kubernetes
+
+⬜ Microservices
+
+⬜ Cloud Scaling
+
 
 ```
 
@@ -426,19 +680,20 @@ Backend Development
 # 🏆 Why This Project?
 
 
-This project represents practical backend engineering experience by implementing a complete REST API workflow.
+This project represents practical backend engineering experience by implementing:
 
-It demonstrates the ability to:
+- Production API patterns
+- Database-driven architecture
+- Scalable backend design
+- Modern deployment practices
 
-- Design backend services
-- Connect applications with databases
-- Build maintainable APIs
-- Handle real-world data operations
+
+It demonstrates the ability to build software beyond simple tutorials and move toward real-world engineering systems.
 
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Developer
 
 
 ## Anushka Mulik
@@ -451,11 +706,14 @@ https://github.com/anushka-mulik
 
 ---
 
+
 <div align="center">
 
-### ⭐ If you found this project useful, consider starring the repository.
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7b2ff7,100:00c6ff&height=120&section=footer"/>
 
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer"/>
+### ⭐ Build. Scale. Deploy. Repeat.
+
 
 </div>
